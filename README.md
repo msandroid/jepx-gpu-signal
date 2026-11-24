@@ -37,6 +37,27 @@ python -m venv .venv
 .\.venv\Scripts\pythonw.exe app.py
 ```
 
+## CLI の使い方
+
+ターミナルやバッチ処理からも同じ判定ロジックを利用できます。
+
+```powershell
+# 現在の判定を表示（デフォルトエリア）
+.\.venv\Scripts\python.exe cli.py
+
+# エリア指定 + 直近7日ヒートマップ表示
+.\.venv\Scripts\python.exe cli.py --area 東京 --heatmap
+
+# 全エリア一覧表示
+.\.venv\Scripts\python.exe cli.py --all
+
+# JSON 出力
+.\.venv\Scripts\python.exe cli.py --area 九州 --json
+
+# 自動化向け終了コード判定（緑=0, 標準=1, 赤=2）
+.\.venv\Scripts\python.exe cli.py --area 北海道 --check
+```
+
 ## テスト
 
 ```powershell
